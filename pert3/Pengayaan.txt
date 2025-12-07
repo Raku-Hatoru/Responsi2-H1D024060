@@ -8,3 +8,7 @@ Setelah menyelesaikan kode, jawab pertanyaan berikut:
 5. Mengapa kita perlu menggunakan Inheritance? Apa keuntungan utamanya dibandingkan membuat dua class yang terpisah sama sekali (misal class Karyawan dan class Manajer dibuat terpisah tanpa hubungan)?
 
 Jawaban:
+1. untuk menjadikan itu extend dari suatu class
+2. overloading di sebelumnya itu untuk constractor lebih dari satu kalau sekarang itu perpanjangan tangan dari behavior
+3. maka akan terjadi error di menager karena aksesnya dibatasi, solusinya menambahkan methot get
+4. biar tidak mengulang" program yang repetitif

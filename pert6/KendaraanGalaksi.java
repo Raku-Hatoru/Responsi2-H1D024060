@@ -8,12 +8,18 @@ public abstract class KendaraanGalaksi {
     // - String namaKendaraan
     // - int levelEnergi         (0–100)
     // - int kapasitasPenumpang
-
+    public String namaKendaraan;
+    public int levelEnergi;
+    int kapasistasPenumpang;
 
     // ==========================================================
     // CONSTRUCTOR
     // ==========================================================
-
+    public KendaraanGalaksi(String namaKendaraan, int kapasistasPenumpang) {
+        this.namaKendaraan = namaKendaraan;
+        this.levelEnergi = 100;
+        this.kapasistasPenumpang = kapasistasPenumpang;
+    }
     // TODO:
     // Constructor menerima:
     //   - namaKendaraan
@@ -26,8 +32,21 @@ public abstract class KendaraanGalaksi {
     // ==========================================================
 
     // TODO: Getter namaKendaraan
+
+    public String getNamaKendaraan() {
+        return namaKendaraan;
+    }
+
     // TODO: Getter levelEnergi
+
+    public int getLevelEnergi() {
+        return levelEnergi;
+    }
+
     // TODO: Getter kapasitasPenumpang
+    public int getKapasistasPenumpang() {
+        return kapasistasPenumpang;
+    }
 
 
     // ==========================================================
@@ -36,6 +55,9 @@ public abstract class KendaraanGalaksi {
 
     // TODO:
     // Method final tampilStatus()
+    void tampilaninfo(){
+        System.out.println(namaKendaraan+" | "+levelEnergi+"% | "+kapasistasPenumpang+"awak");
+    }
     // Format:
     // "[namaKendaraan] | Energi: [levelEnergi]% | Kapasitas: [kapasitasPenumpang] awak"
 
@@ -45,11 +67,11 @@ public abstract class KendaraanGalaksi {
     // ==========================================================
 
     // TODO:
-    // abstract void aktifkanMesin();
+    abstract void aktifkanMesin();
 
     // TODO:
-    // abstract void jelajah(int jarak);
+    abstract void jelajah(int jarak);
 
     // TODO:
-    // abstract void isiEnergi(int jumlah);
+    abstract void isiEnergi(int jumlah);
 }

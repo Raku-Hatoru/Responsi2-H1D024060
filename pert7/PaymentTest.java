@@ -3,6 +3,12 @@ public class PaymentTest {
     public static void main(String[] args) {
 
         // TODO:
+        EWalletPayment wallet = new EWalletPayment("OVO", 150000, 50000);
+        System.out.println("=== PROGRAM SISTEM PEMBAYARAN (E-WALLET) ===");
+        System.out.println("Saldo Awal: " + wallet.getBalance());
+        wallet.processPayment();
+        System.out.println("Sisa Saldo: " + wallet.getBalance());
+        System.out.println(wallet.getPaymentDetails());
         // - Buat objek dari EWalletPayment
         // - Panggil method yang telah dibuat untuk menguji fungsionalitas
         // - Tampilkan hasil akhir informasi saldo dan detail pembayaran

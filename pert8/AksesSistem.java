@@ -1,25 +1,27 @@
-public interface KaryawanKontrak {
+public interface AksesSistem {
     
     // ==========================================================
     // METHOD ABSTRAK (WAJIB DIIMPLEMENTASIKAN DI CLASS ProgramerMagang)
     // ==========================================================
-    
-    // DEKLARASI METHOD 1: hitungGaji
-    // Menerima satu parameter: int jamKerja
-    // Mengembalikan nilai: double (total gaji)
-    
-    
-    // DEKLARASI METHOD 2: perpanjangKontrak
-    // Menerima satu parameter: int durasiBulan
+    void login(String pin);
+    // DEKLARASI METHOD 1: login
+    // Menerima satu parameter: String pin
+    // Mengembalikan nilai: void
+
+    void logout();
+    // DEKLARASI METHOD 2: logout
+    // Tidak menerima parameter
     // Mengembalikan nilai: void
     
     
     // ==========================================================
     // DEFAULT METHOD (OPSIONAL DI-OVERRIDE)
     // ==========================================================
-    
-    // DEKLARASI DEFAULT METHOD: getStatusCuti
+    default String getRoleAkses() {
+        return "Staff Biasa";
+    }
+    // DEKLARASI DEFAULT METHOD: getRoleAkses
     // Tidak menerima parameter
-    // Mengembalikan nilai: String "Tersedia 12 hari"
+    // Mengembalikan nilai: String "Staff Biasa"
     
 }
